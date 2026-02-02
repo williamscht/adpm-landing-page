@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ADPM — Services mutualisés pour mutuelles de proximité" />
+    <title>ADPM — Landing</title>
+    <link rel="icon" href="./images/favicon/ADPM1_favicon_.webp" type="image/webp" />
+
+    <!-- Font (option : Google Fonts). Remplace par ta font locale ensuite -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/sections.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+
+  <body>
+    <!-- A — Header & Navigation (Capsule Design) -->
+    <header class="site-header" role="banner">
+      <!-- Header Shell (Capsule) -->
+      <div class="header-shell">
+        <!-- Brand / Logo -->
+        <a class="brand" href="#top" aria-label="ADPM - Home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">ADPM</span>
+        </a>
+
+        <!-- Navigation Desktop -->
+        <nav class="nav-desktop" aria-label="Main Navigation">
+          <a href="#about" class="nav-link" data-text="L’ADPM"><span class="nav-link-text">L’ADPM</span></a>
+          <a href="#results" class="nav-link" data-text="Mutuelles accompagnées"><span class="nav-link-text">Mutuelles accompagnées</span></a>
+          <a href="#services" class="nav-link" data-text="Nos services"><span class="nav-link-text">Nos services</span></a>
+          <a href="#how" class="nav-link" data-text="Notre accompagnement"><span class="nav-link-text">Notre accompagnement</span></a>
+        </nav>
+
+        <!-- CTA Button -->
+        <button class="header-cta" id="ctaBtn" aria-label="Get in Touch">
+          <span class="header-cta-text">Nous contacter</span>
+          <span class="header-cta-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </span>
+        </button>
+      </div>
+
+      <!-- Navigation Mobile -->
+      <nav class="nav-mobile" id="navMobile" aria-label="Mobile Navigation" hidden>
+        <div class="nav-mobile-inner">
+          <a href="#about" class="nav-link" data-text="About"><span class="nav-link-text">L'ADPM</span></a>
+          <a href="#results" class="nav-link" data-text="Client Results"><span class="nav-link-text">Mutuelles accompagnées</span></a>
+          <a href="#services" class="nav-link" data-text="Services"><span class="nav-link-text">Nos services</span></a>
+          <a href="#how" class="nav-link" data-text="How it works"><span class="nav-link-text">Notre accompagnement</span></a>
+          <button class="header-cta header-cta-mobile" aria-label="Get in Touch">
+            <span class="header-cta-text">Nous contacter</span>
+            <span class="header-cta-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- B — Hero Section -->
+      <section class="section hero" id="hero">
+        <div class="container hero-container">
+          <!-- Left Column: Text -->
+          <div class="hero-content">
+
+            <!-- H1 -->
+            <h1 class="hero-title">
+              Appui technique pour mutuelles de proximité
+            </h1>
+
+            <!-- Lead Paragraph -->
+            <p class="lead hero-lead">
+              Conformité réglementaire, IT et cybersécurité, formation et solutions numériques adaptées. Des services mutualisés et opérationnels pour sécuriser le fonctionnement des mutuelles et défendre leur autonomie de gestion.
+            </p>
+
+            <!-- CTA Actions -->
+            <div class="hero-actions">
+              <a href="#services" class="btn btn-primary hero-cta" aria-label="Start Now">
+                <span>Nos services</span>
+              </a>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="hero-social-proof">
+              <div class="expertise-partners">
+                <p class="partners-label">Nos partenaires</p>
+                <div class="partners-band">
+                  <div class="partners-track">
+                    <div class="partner-logo">
+                      <img src="./images/logos/Almutra%20logo.png" alt="Almutra" loading="lazy" />
+                    </div>
+                    <div class="partner-logo">
+                      <img src="./images/logos/COMPLEVIE-copie-300x212.png" alt="Complevie" loading="lazy" />
+                    </div>
+                    <div class="partner-logo">
+                      <img src="./images/logos/Le%20refuge%20Logo.png" alt="Le Refuge" loading="lazy" />
+                    </div>
+                    <div class="partner-logo">
+                      <img src="./images/logos/Logo-Mutuelle-MMH.png" alt="Mutuelle MMH" loading="lazy" />
+                    </div>
+                    <div class="partner-logo">
+                      <img src="./images/logos/MBA-LOGO.jpeg" alt="MBA" loading="lazy" />
+                    </div>
+                    <div class="partner-logo">
+                      <img src="./images/logos/Preccocia%20Logo.jpeg" alt="Preccocia" loading="lazy" />
+                    </div>
+                    <div class="partner-logo">
+                      <img src="./images/logos/SMIE%20vannes.jpeg" alt="SMIE Vannes" loading="lazy" />
+                    </div>
+                    <div class="partner-logo">
+                      <img src="./images/logos/Serena%20mutuelle%20logo.png" alt="Serena Mutuelle" loading="lazy" />
+                    </div>
+                    <div class="partner-logo">
+                      <img src="./images/logos/cropped-logo-seramm-color.png" alt="Seramm" loading="lazy" />
+                    </div>
+                    <div class="partner-logo">
+                      <img src="./images/logos/m_comme_mutuelle_600x600.avif" alt="M Comme Mutuelle" loading="lazy" />
+                    </div>
+                    <div class="partner-logo" aria-hidden="true">
+                      <img src="./images/logos/Almutra%20logo.png" alt="" loading="lazy" />
+                    </div>
+                    <div class="partner-logo" aria-hidden="true">
+                      <img src="./images/logos/COMPLEVIE-copie-300x212.png" alt="" loading="lazy" />
+                    </div>
+                    <div class="partner-logo" aria-hidden="true">
+                      <img src="./images/logos/Le%20refuge%20Logo.png" alt="" loading="lazy" />
+                    </div>
+                    <div class="partner-logo" aria-hidden="true">
+                      <img src="./images/logos/Logo-Mutuelle-MMH.png" alt="" loading="lazy" />
+                    </div>
+                    <div class="partner-logo" aria-hidden="true">
+                      <img src="./images/logos/MBA-LOGO.jpeg" alt="" loading="lazy" />
+                    </div>
+                    <div class="partner-logo" aria-hidden="true">
+                      <img src="./images/logos/Preccocia%20Logo.jpeg" alt="" loading="lazy" />
+                    </div>
+                    <div class="partner-logo" aria-hidden="true">
+                      <img src="./images/logos/SMIE%20vannes.jpeg" alt="" loading="lazy" />
+                    </div>
+                    <div class="partner-logo" aria-hidden="true">
+                      <img src="./images/logos/Serena%20mutuelle%20logo.png" alt="" loading="lazy" />
+                    </div>
+                    <div class="partner-logo" aria-hidden="true">
+                      <img src="./images/logos/cropped-logo-seramm-color.png" alt="" loading="lazy" />
+                    </div>
+                    <div class="partner-logo" aria-hidden="true">
+                      <img src="./images/logos/m_comme_mutuelle_600x600.avif" alt="" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="social-proof-sub">Plus de 20 mutuelles et partenaires nous font confiance</div>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual -->
+          <div class="hero-visual">
+            <!-- Main Image Placeholder -->
+            <div class="hero-image">
+              <img src="./images/hero_adpm_1.webp" alt="Hero visual" class="hero-image-img" />
+            </div>
+
+            <!-- Overlay Badge (Yellow) -->
+            <div class="hero-overlay badge-overlay">
+              <div class="badge-stat">
+                <span class="badge-value">+20</span>
+                <span class="badge-label">Mutuelles accompagnées</span>
+              </div>
+            </div>
+
+            <!-- Overlay Card 1 (White - Percentage) -->
+            <div class="hero-overlay card-overlay card-overlay-1">
+              <div class="overlay-card">
+                <p class="card-value">Depuis 2006</p>
+                <p class="card-label">Un appui opérationnel inscrit dans la durée</p>
+              </div>
+            </div>
+
+            <!-- Overlay Card 2 (White - Clients) -->
+            <div class="hero-overlay card-overlay card-overlay-2">
+              <div class="overlay-card">
+                <p class="card-value">Services mutualisés activables</p>
+                <p class="card-label">Selon les besoins et l’organisation de chaque mutuelle</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C — About / Authority Section -->
+      <section class="section about" id="about">
+        <!-- Niveau 1: Text + Image -->
+        <div class="container about-container">
+          <!-- Left Column: Text Content -->
+          <div class="about-content">
+            <!-- Eyebrow -->
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span>À propos</span>
+            </p>
+
+            <!-- H2 -->
+            <h2 class="about-title">
+              L'expertise au service de la proximité
+            </h2>
+
+            <!-- Lead Paragraph -->
+            <p class="lead about-lead">
+              Créée en 2006, l’ADPM accompagne les mutuelles de proximité face à leurs enjeux réglementaires, techniques et organisationnels. Elle met à disposition des services mutualisés et des compétences spécialisées, adaptés à la réalité des mutuelles, dans une logique d’appui opérationnel et de coopération entre pairs.
+            </p>
+          </div>
+
+          <!-- Right Column: Image -->
+          <div class="about-visual">
+            <img src="./images/about_us.avif" alt="ADPM team" class="about-image" />
+          </div>
+        </div>
+
+        <!-- Niveau 2: Stats Grid -->
+        <div class="about-stats-wrapper">
+          <div class="container about-stats-container">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <p class="stat-value">20 ans</p>
+                <p class="stat-label">Expérience et de longévité</p>
+                <p class="stat-description">Créée en 2006, l’ADPM s’inscrit dans la durée et accompagne les mutuelles de proximité dans un environnement réglementaire et opérationnel en constante évolution.</p>
+              </div>
+              <div class="stat-card">
+                <p class="stat-value">20+</p>
+                <p class="stat-label">Mutuelles accompagnées</p>
+                <p class="stat-description">Des mutuelles de proximité et partenaires qui s’appuient sur l’ADPM pour structurer et sécuriser leur fonctionnement au quotidien.</p>
+              </div>
+              <div class="stat-card">
+                <p class="stat-value">4</p>
+                <p class="stat-label">Domaines d’intervention</p>
+                <p class="stat-description">Conformité réglementaire, IT et cybersécurité, formation des salariés et administrateurs, accompagnement numérique mutualisé.</p>
+              </div>
+              <div class="stat-card">
+                <p class="stat-value">100 %</p>
+                <p class="stat-label">Par et pour les mutuelles</p>
+                <p class="stat-description">Une association conçue et animée par des acteurs du monde mutualiste, avec une compréhension directe des enjeux, des contraintes et des réalités de terrain.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- F — Services Section -->
+      <section class="section services" id="services">
+        <div class="services__intro">
+          <div class="container">
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Nos services</span>
+            </p>
+            <h2 class="services__title">Des services opérationnels pour les mutuelles de proximité</h2>
+            <p class="lead services__lead">Répondre concrètement aux enjeux réglementaires et opérationnels, au service de votre autonomie de gestion.</p>
+          </div>
+        </div>
+
+        <div class="services__cards">
+          <div class="container">
+            <div class="services__group">
+              <h3 class="services__group-title">Conformité & Sécurité</h3>
+
+              <!-- Card 1 -->
+            <article class="services__card">
+              <div class="services__content">
+                <h3>Protection des données</h3>
+                <p class="services__desc">Sécurisez vos données et votre conformité sans alourdir vos équipes. Un <strong>DPO</strong> et un <strong>RSSI mutualisés</strong> vous accompagnent durablement sur le <strong>RGPD</strong>, <strong>la cybersécurité</strong>, <strong>la gestion des risques et des incidents</strong>, avec des coûts maîtrisés et des pratiques éprouvées.</p>
+                <hr class="services__sep" />
+                <p class="expertises_required">Expertises mobilisées</p>
+                <div class="services__tags">
+                  <span class="tag">Conformité</span>
+                  <span class="tag">RSSI</span>
+                  <span class="tag">Cybersécurité</span>
+                </div>
+              </div>
+              <div class="services__media">
+                <img src="./images/services/conformite.avif" alt="Business Strategy" />
+              </div>
+            </article>
+
+              <!-- Card 2 -->
+              <article class="services__card">
+                <div class="services__content">
+                  <h3>Formation des salariés et administrateurs</h3>
+                  <p class="services__desc">Assurez la montée en compétences de vos équipes et répondez à vos obligations de formation. ADPM Formation propose des parcours en ligne conformes aux exigences réglementaires, avec traçabilité, mise à jour continue et déploiement simplifié.</p>
+                  <hr class="services__sep" />
+                <p class="expertises_required">Expertises mobilisées</p>
+                <div class="services__tags">
+                  <span class="tag">Formation</span>
+                  <span class="tag">Obligations réglementaires</span>
+                  <span class="tag">Administrateurs</span>
+                </div>
+              </div>
+                <div class="services__media">
+                  <img src="./images/services/cyber.avif" alt="Cybersecurity" />
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="services__card">
+                <div class="services__content">
+                  <h3>Médiation</h3>
+                  <p class="services__desc">Répondez simplement à votre obligation de médiation. Le service mutualisé de l’ADPM prend en charge le traitement indépendant et conforme des litiges, renforçant la sécurité réglementaire et la confiance des adhérents.</p>
+                  <hr class="services__sep" />
+                  <p class="expertises_required">Expertises mobilisées</p>
+                  <div class="services__tags">
+                    <span class="tag">Médiation</span>
+                    <span class="tag">Conformité</span>
+                    <span class="tag">Relation adhérents</span>
+                  </div>
+                </div>
+                <div class="services__media">
+                  <img src="./images/services/communication.avif" alt="Implementation" />
+                </div>
+              </article>
+            </div>
+
+            <div class="services__group services__group--tools">
+              <h3 class="services__group-title">Outils &amp; Performance</h3>
+
+              <!-- Card 4 -->
+              <article class="services__card">
+                <div class="services__content">
+                  <h3>Solutions logicielles métiers – MutSaaS</h3>
+                  <p class="services__desc">Accédez à des outils métiers en mode SaaS, développés et infogérés par l’ADPM. Tarificateur, CRM et GED sont pensés pour garantir fiabilité, sécurité, conformité et autonomie technologique des mutuelles de proximité.</p>
+                  <hr class="services__sep" />
+                  <p class="expertises_required">Expertises mobilisées</p>
+                  <div class="services__tags">
+                    <span class="tag">Logiciels métiers</span>
+                    <span class="tag">SaaS</span>
+                    <span class="tag">Infogérance</span>
+                  </div>
+                </div>
+                <div class="services__media">
+                  <img src="./images/services/XoKdDqs2kZmQMVK7PiRkjLBVD0.avif" alt="Compliance" />
+                </div>
+              </article>
+
+              <!-- Card 5 -->
+              <article class="services__card">
+                <div class="services__content">
+                  <h3>IA générative &amp; automatisation – GÉN<em>IA</em>L</h3>
+                  <p class="services__desc">Accélérez l’efficacité de vos équipes grâce à l’IA générative. GÉNIAL accompagne votre mutuelle dans l’automatisation des processus métiers et le déploiement d’outils d’IA utiles, sécurisés et conformes aux exigences du secteur mutualiste.</p>
+                  <hr class="services__sep" />
+                  <p class="expertises_required">Expertises mobilisées</p>
+                  <div class="services__tags">
+                    <span class="tag">IA générative</span>
+                    <span class="tag">Automatisation</span>
+                    <span class="tag">Sécurisation</span>
+                  </div>
+                </div>
+                <div class="services__media">
+                  <img src="./images/services/cyber.avif" alt="IA générative" />
+                </div>
+              </article>
+            </div>
+
+            <div class="services__group services__group--communications">
+              <h3 class="services__group-title">Communication &amp; Services adhérents</h3>
+
+              <!-- Card 6 -->
+              <article class="services__card">
+                <div class="services__content">
+                  <h3>Communication web &amp; visibilité en ligne</h3>
+                  <p class="services__desc">Développez votre notoriété sans mobiliser de ressources internes dédiées. Stratégie web, création ou refonte de site, SEO, contenus et accompagnement mutualisé pour renforcer durablement votre présence numérique.</p>
+                  <hr class="services__sep" />
+                  <p class="expertises_required">Expertises mobilisées</p>
+                  <div class="services__tags">
+                    <span class="tag">Site web</span>
+                    <span class="tag">SEO</span>
+                    <span class="tag">Acquisition</span>
+                  </div>
+                </div>
+                <div class="services__media">
+                  <img src="./images/services/communication.avif" alt="Communication web" />
+                </div>
+              </article>
+
+              <!-- Card 7 -->
+              <article class="services__card">
+                <div class="services__content">
+                  <h3>Média mutualiste clé en main – Le M@G</h3>
+                  <p class="services__desc">Diffusez vos messages dans un média dédié au monde mutualiste. Le M@G combine magazine papier et numérique, ainsi que des formats audio, pour relayer vos actualités et contenus santé auprès de vos adhérents.</p>
+                  <hr class="services__sep" />
+                  <p class="expertises_required">Expertises mobilisées</p>
+                  <div class="services__tags">
+                    <span class="tag">Contenus</span>
+                    <span class="tag">Magazine</span>
+                    <span class="tag">Podcast</span>
+                  </div>
+                </div>
+                <div class="services__media">
+                  <img src="./images/services/conformite.avif" alt="Média mutualiste" />
+                </div>
+              </article>
+
+              <!-- Card 8 -->
+              <article class="services__card">
+                <div class="services__content">
+                  <h3>Services d’assistance aux adhérents</h3>
+                  <p class="services__desc">Offrez à vos adhérents un accompagnement dans les moments clés. Ma Mutuelle Assistance propose une assistance 24/7 (hospitalisation, aide à domicile, garde d’enfants, soutien psychologique), renforçant l’utilité et la proximité de votre mutuelle.</p>
+                  <hr class="services__sep" />
+                  <p class="expertises_required">Expertises mobilisées</p>
+                  <div class="services__tags">
+                    <span class="tag">Assistance</span>
+                    <span class="tag">Services adhérents</span>
+                    <span class="tag">Accompagnement</span>
+                  </div>
+                </div>
+                <div class="services__media">
+                  <img src="./images/services/communication.avif" alt="Assistance" />
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- D — Expertise Section -->
+      <section class="section expertise" id="expertise">
+        <div class="container expertise-container">
+          <!-- Left Column: Image + Partners -->
+          <div class="expertise-left">
+            <div class="expertise-visual">
+              <img src="./images/expertise_adpm.avif" alt="Expertise" class="expertise-image" />
+            </div>
+
+          </div>
+
+          <!-- Right Column: Content -->
+          <div class="expertise-content">
+            <!-- Eyebrow -->
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Notre expertise</span>
+            </p>
+
+            <!-- Title -->
+            <h2 class="expertise-title">
+              Des Comités Techniques au cœur des enjeux mutualistes
+            </h2>
+
+            <!-- Lead Paragraph -->
+            <p class="lead expertise-lead">
+              Le rendez-vous mensuel incontournable pour les opérationnels qui souhaitent rester à la pointe de l'actualité technique et réglementaire. Notre <em>CoTech</em> est un moment d'échange entre pairs avec une règle simple:
+            </p>
+            <p class="lead expertise-lead">
+              <em>Si tu ne sais pas... demande et si tu connais... partage</em>. À l'ADPM, l'entraide et la solidarité s'appliquent aussi entre les mutuelles !
+            </p>
+          </div>
+
+          <!-- Checklist -->
+          <ul class="expertise-list">
+            <li class="expertise-item">
+              <svg class="expertise-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Rencontres mensuelles</strong> entre mutuelles de proximité</span>
+            </li>
+            <li class="expertise-item">
+              <svg class="expertise-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Webinaires accessibles</strong> à distance</span>
+            </li>
+            <li class="expertise-item">
+              <svg class="expertise-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Échanges entre pairs</strong> et retours d’expérience concrets</span>
+            </li>
+            <li class="expertise-item">
+              <svg class="expertise-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Ressources</strong> disponibles en différé</span>
+            </li>
+            <li class="expertise-item">
+              <svg class="expertise-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Veille réglementaire et technique</strong>, traduite en actions opérationnelles</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section how" id="how">
+        <div class="container how-container">
+          <header class="how-header">
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Notre approche</span>
+            </p>
+            <h2 class="how-title">Comment l’ADPM accompagne votre mutuelle ?</h2>
+            <p class="how-lead">Chaque service de l’ADPM peut être mobilisés selon vos besoins. L’accompagnement repose sur un cadre clair, des actions directement opérationnelles et une coordination simple avec vos équipes.</p>
+          </header>
+
+          <div class="how-timeline">
+            <article class="how-step">
+              <div class="how-visual">
+                <img src="./images/Services/conformite.avif" alt="Diagnostic initial" loading="lazy" />
+              </div>
+              <div class="how-axis">
+                <span class="how-number">01</span>
+                <span class="how-dot" aria-hidden="true"></span>
+                <span class="how-line" aria-hidden="true"></span>
+              </div>
+              <div class="how-content">
+                <div class="how-number-text">01</div>
+                <h3>Cadrage des enjeux</h3>
+                <p>Un échange court pour identifier vos priorités réglementaires, techniques ou organisationnelles.</p>
+              </div>
+            </article>
+
+            <article class="how-step">
+              <div class="how-visual">
+                <img src="./images/Services/communication.avif" alt="Plan d'action" loading="lazy" />
+              </div>
+              <div class="how-axis">
+                <span class="how-number">02</span>
+                <span class="how-dot" aria-hidden="true"></span>
+                <span class="how-line" aria-hidden="true"></span>
+              </div>
+              <div class="how-content">
+                <div class="how-number-text">02</div>
+                <h3>Mise en place des services</h3>
+                <p>Déploiement des services choisis, sans alourdir votre organisation interne.</p>
+              </div>
+            </article>
+
+            <article class="how-step">
+              <div class="how-visual">
+                <img src="./images/Services/cyber.avif" alt="Mise en oeuvre" loading="lazy" />
+              </div>
+              <div class="how-axis">
+                <span class="how-number">03</span>
+                <span class="how-dot" aria-hidden="true"></span>
+                <span class="how-line" aria-hidden="true"></span>
+              </div>
+              <div class="how-content">
+                <div class="how-number-text">03</div>
+                <h3>Accompagnement opérationnel</h3>
+                <p>Intervention dans la durée, livrables concrets, suivi régulier et appui au quotidien.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section why" id="why">
+        <div class="container why-container">
+          <header class="why-header">
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Pourquoi choisir l'ADPM ?</span>
+            </p>
+            <h2 class="why-title">Une association conçue par et pour les mutuelles de proximité</h2>
+            <p class="why-lead">Portée par des acteurs mutualistes, construite pour apporter des réponses concrètes aux besoins spécifiques des petites et moyennes mutuelles de proximité.</p>
+          </header>
+
+          <div class="why-grid">
+            <article class="why-card why-card--other">
+              <h3>Approches classiques</h3>
+              <ul class="why-list">
+                <li class="why-item">
+                  <span class="why-icon why-icon--bad" aria-hidden="true"></span>
+                  <span>Multiplication des prestataires et interlocuteurs.</span>
+                </li>
+                <li class="why-item">
+                  <span class="why-icon why-icon--bad" aria-hidden="true"></span>
+                  <span>Difficulté à mobiliser des compétences spécialisées en interne.</span>
+                </li>
+                <li class="why-item">
+                  <span class="why-icon why-icon--bad" aria-hidden="true"></span>
+                  <span>Dispositifs souvent conçus pour des structures plus grandes.</span>
+                </li>
+                <li class="why-item">
+                  <span class="why-icon why-icon--bad" aria-hidden="true"></span>
+                  <span>Coûts fixes élevés et mise en œuvre complexe.</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="why-card why-card--stratify">
+              <h3>Avec l’ADPM</h3>
+              <ul class="why-list">
+                <li class="why-item">
+                  <span class="why-icon why-icon--good" aria-hidden="true"></span>
+                  <span>Services mutualisés ou dédiés, selon vos besoins.</span>
+                </li>
+                <li class="why-item">
+                  <span class="why-icon why-icon--good" aria-hidden="true"></span>
+                  <span>Expertise sectorielle : conformité, IT, formation, numériques.</span>
+                </li>
+                <li class="why-item">
+                  <span class="why-icon why-icon--good" aria-hidden="true"></span>
+                  <span>Mise en place progressive, adaptée à la taille de votre mutuelle.</span>
+                </li>
+                <li class="why-item">
+                  <span class="why-icon why-icon--good" aria-hidden="true"></span>
+                  <span>Appui concret, sans perte d’autonomie.</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials" id="testimonials">
+        <div class="container testimonials-container">
+          <header class="testimonials-header">
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Témoignages</span>
+            </p>
+            <h2 class="testimonials-title">Ils nous font confiance pour structurer leurs operations</h2>
+            <p class="testimonials-lead">Des retours concrets d'equipes terrain qui ont simplifie leurs processus et gagne en impact.</p>
+          </header>
+
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <i class="fa-solid fa-quote-left testimonial-quote" aria-hidden="true"></i>
+              <p>Une approche claire et operationnelle. Nous avons pu rationaliser nos priorites et embarquer nos equipes tres vite.</p>
+              <div class="testimonial-author">
+                <img src="./images/logos/CMIP%20logo.png" alt="CMIP" loading="lazy" class="testimonial-avatar" />
+                <div class="testimonial-meta">
+                  <strong>Anne Legrand</strong>
+                  <span>Directrice des operations, CMIP</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <i class="fa-solid fa-quote-left testimonial-quote" aria-hidden="true"></i>
+              <p>Le pilotage est devenu lisible. Les indicateurs sont enfin exploitables et le suivi avance sans friction.</p>
+              <div class="testimonial-author">
+                <img src="./images/logos/m_comme_mutuelle_600x600.avif" alt="M Comme Mutuelle" loading="lazy" class="testimonial-avatar" />
+                <div class="testimonial-meta">
+                  <strong>Karim Benali</strong>
+                  <span>Responsable SI, M Comme Mutuelle</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <i class="fa-solid fa-quote-left testimonial-quote" aria-hidden="true"></i>
+              <p>Un accompagnement pragmatique qui s'adapte a notre rythme. Les livrables sont directement actionnables.</p>
+              <div class="testimonial-author">
+                <img src="./images/logos/cropped-logo-seramm-color.png" alt="Seramm" loading="lazy" class="testimonial-avatar" />
+                <div class="testimonial-meta">
+                  <strong>Julie Martin</strong>
+                  <span>Directrice generale, Seramm</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <i class="fa-solid fa-quote-left testimonial-quote" aria-hidden="true"></i>
+              <p>La mutualisation nous a permis de reduire les couts sans sacrifier la qualite ni la proximite.</p>
+              <div class="testimonial-author">
+                <img src="./images/logos/Almutra%20logo.png" alt="Almutra" loading="lazy" class="testimonial-avatar" />
+                <div class="testimonial-meta">
+                  <strong>Mehdi Larbi</strong>
+                  <span>President, Almutra</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <i class="fa-solid fa-quote-left testimonial-quote" aria-hidden="true"></i>
+              <p>Les equipes terrain ont gagne en autonomie avec une methode simple et des outils bien calibres.</p>
+              <div class="testimonial-author">
+                <img src="./images/logos/Logo-Mutuelle-MMH.png" alt="Mutuelle MMH" loading="lazy" class="testimonial-avatar" />
+                <div class="testimonial-meta">
+                  <strong>Sophie Bernard</strong>
+                  <span>Directrice reseau, Mutuelle MMH</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <i class="fa-solid fa-quote-left testimonial-quote" aria-hidden="true"></i>
+              <p>Nous avons gagne en serenite sur la conformite, avec un suivi reguliers des actions et des preuves.</p>
+              <div class="testimonial-author">
+                <img src="./images/logos/COMPLEVIE-copie-300x212.png" alt="Complevie" loading="lazy" class="testimonial-avatar" />
+                <div class="testimonial-meta">
+                  <strong>Claire Dupuis</strong>
+                  <span>Responsable conformite, Complevie</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <i class="fa-solid fa-quote-left testimonial-quote" aria-hidden="true"></i>
+              <p>Un cadre clair, des echanges utiles et des livrables concrets. Nos equipes avancent plus vite.</p>
+              <div class="testimonial-author">
+                <img src="./images/logos/Le refuge Logo.png" alt="Le Refuge" loading="lazy" class="testimonial-avatar" />
+                <div class="testimonial-meta">
+                  <strong>Paul Leroux</strong>
+                  <span>Directeur operations, Le Refuge</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <i class="fa-solid fa-quote-left testimonial-quote" aria-hidden="true"></i>
+              <p>Les methodes sont simples a appliquer et les resultats se voient rapidement sur le terrain.</p>
+              <div class="testimonial-author">
+                <img src="./images/logos/MBA-LOGO.jpeg" alt="MBA" loading="lazy" class="testimonial-avatar" />
+                <div class="testimonial-meta">
+                  <strong>Nadia Morel</strong>
+                  <span>Responsable projets, MBA</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <i class="fa-solid fa-quote-left testimonial-quote" aria-hidden="true"></i>
+              <p>Une vraie proximite et un suivi regulier qui nous aide a rester aligne avec nos obligations.</p>
+              <div class="testimonial-author">
+                <img src="./images/logos/Preccocia%20Logo.jpeg" alt="Preccocia" loading="lazy" class="testimonial-avatar" />
+                <div class="testimonial-meta">
+                  <strong>Lucie Garnier</strong>
+                  <span>Directrice qualite, Preccocia</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="container faq-container">
+          <div class="faq-left">
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span>FAQ</span>
+            </p>
+            <h2 class="faq-title">Questions pratiques, réponses directes</h2>
+            <p class="faq-lead">Un format simple pour comprendre notre fonctionnement et les modalites de collaboration.</p>
+            <a class="btn btn-primary faq-cta" href="#contact"><span>Prendre rendez-vous</span></a>
+          </div>
+
+          <div class="faq-right">
+            <details class="faq-item" open>
+              <summary>Comment demarre la collaboration ?</summary>
+              <p>Nous demarrons par un diagnostic court pour cadrer les enjeux, puis nous construisons une feuille de route operationnelle partagee.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Quelles tailles de structures accompagnez-vous ?</summary>
+              <p>Nous intervenons aupres de mutuelles et d'acteurs locaux de toutes tailles avec une approche adaptee au contexte.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Quel est le niveau d'implication de nos equipes ?</summary>
+              <p>L'implication est progressive et pragmatique, avec des points de validation legers et des livrables exploitables.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Quels sont les delais moyens ?</summary>
+              <p>Le rythme est adapte a vos contraintes, avec des cycles courts pour obtenir rapidement des resultats mesurables.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container contact-container">
+          <div class="contact-left">
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Nous contacter</span>
+            </p>
+            <h2 class="contact-title">Échangeons sur les priorités de votre mutuelle</h2>
+            <p class="contact-lead">Exposez vos enjeux réglementaires, techniques ou organisationnels.
+Nous vous proposons un premier échange simple pour identifier les services mobilisables et définir un cadre adapté à votre structure.</p>
+            <img src="./images/about_us.avif" alt="Equipe en discussion" class="contact-image" loading="lazy" />
+          </div>
+
+          <div class="contact-right">
+            <form class="form contact-form" id="contactForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Nom</label>
+                  <input id="name" name="name" autocomplete="name" placeholder="Votre nom" required />
+                </div>
+                <div class="field">
+                  <label for="company">Nom de votre mutuelle</label>
+                  <input id="company" name="company" autocomplete="organization" placeholder="Nom de votre mutuelle" />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="Nom@mutuelle.fr" required />
+                </div>
+                <div class="field">
+                  <label for="phone">Numéro de téléphone (optionnel)</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+33 6 12 34 56 78" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="service">Services</label>
+                <select id="service" name="service">
+                  <option value="" selected>Selectionnez un besoin</option>
+                  <option value="conformite">Conformite et RGPD</option>
+                  <option value="cybersecurite">Cybersecurite</option>
+                  <option value="operations">Operations et support</option>
+                  <option value="pilotage">Pilotage et indicateurs</option>
+                  <option value="formation">Formation des equipes</option>
+                  <option value="communication">Communication et visibilite</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Décrivez brièvement votre besoin ou vos priorités (conformité, cybersécurité, formation, outils…)." required></textarea>
+              </div>
+              <button class="btn btn-primary contact-submit" type="submit">Être recontacté</button>
+              <p class="muted" id="formHint" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-row footer-row-top">
+          <div class="footer-brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-text">ADPM</span>
+          </div>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="#about">L’ADPM</a>
+            <a href="#testimonials">Témoignages</a>
+            <a href="#services">Nos services</a>
+            <a href="#how">Notre accompagnement</a>
+          </nav>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn" class="footer-social">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="footer-social">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="footer-social">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-divider" aria-hidden="true"></div>
+
+        <div class="footer-row footer-row-bottom">
+          <p class="footer-copy">© Copyright <span id="year"></span>. All Rights Reserved by ADPM</p>
+          <div class="footer-credit">
+            <span>Créé par l'ADPM.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
