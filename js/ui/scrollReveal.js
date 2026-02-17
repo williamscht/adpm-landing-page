@@ -1,5 +1,6 @@
 export function initScrollReveal(){
   const targets = [];
+  const isMobile = window.matchMedia("(max-width: 900px)").matches;
 
   document.querySelectorAll(".section").forEach((section) => {
     section.classList.add("reveal-up");
@@ -32,7 +33,11 @@ export function initScrollReveal(){
         }
       });
     },
-    { root: null, rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
+    {
+      root: null,
+      rootMargin: isMobile ? "0px 0px -5% 0px" : "0px 0px -10% 0px",
+      threshold: isMobile ? 0.01 : 0.15
+    }
   );
 
   targets.forEach((el) => observer.observe(el));
