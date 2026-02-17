@@ -6,6 +6,7 @@ import { initBrandScroll } from "./ui/brandScroll.js";
 import { initStatCounter } from "./ui/statCounter.js";
 import { initFaqAccordion } from "./ui/faqAccordion.js";
 import { initServicesFocus } from "./ui/servicesFocus.js";
+import { initScrollReveal } from "./ui/scrollReveal.js";
 
 initMobileNav();
 initHeaderCTA();
@@ -15,3 +16,4 @@ initBrandScroll();
 initStatCounter();
 initFaqAccordion();
 initServicesFocus();
+initScrollReveal();
