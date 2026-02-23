@@ -2850,11 +2850,6 @@
 @media (max-width: 480px){
   .services{ padding: 40px 0; }
   .services__cards{ padding: 0; }
-  .services__group-title{
-    font-size: 1.25rem;
-    text-align: center;
-    justify-content: center;
-  }
   .services__cards .container{
     padding: 0 0 24px;
     gap: 32px;
