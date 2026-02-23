@@ -170,6 +170,7 @@
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/sections.css" />
+  <script src="js/main.js" defer></script>
 </head>
 
   <body>
@@ -213,20 +214,21 @@
       <!-- Navigation Mobile -->
       <nav class="nav-mobile" id="navMobile" aria-label="Mobile Navigation" hidden>
         <div class="nav-mobile-inner">
-          <a href="#about" class="nav-link" data-text="About"><span class="nav-link-text">L'ADPM</span></a>
-          <a href="#results" class="nav-link" data-text="Client Results"><span class="nav-link-text">Mutuelles accompagnées</span></a>
-          <a href="#services" class="nav-link" data-text="Services"><span class="nav-link-text">Nos services</span></a>
-          <a href="#how" class="nav-link" data-text="How it works"><span class="nav-link-text">Notre accompagnement</span></a>
-          <button class="header-cta header-cta-mobile" aria-label="Get in Touch">
-            <span class="header-cta-text">Nous contacter</span>
-            <span class="header-cta-icon" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </span>
-          </button>
+          <a href="#about" class="nav-link">L'ADPM</a>
+          <a href="#services" class="nav-link">Nos services</a>
+          <a href="#expertise" class="nav-link">Notre expertise</a>
+          <a href="#how" class="nav-link">Notre accompagnement</a>
+          <a href="#why" class="nav-link">Pourquoi nous choisir</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+
+          <div class="nav-mobile-actions">
+            <a href="mailto:communication@adpm-mutuelles.fr" class="btn-nous-ecrire">
+              Nous écrire
+            </a>
+          </div>
         </div>
-      </nav>
+    </nav>
+
     </header>
 
     <main id="top">
@@ -342,7 +344,7 @@
             <div class="hero-collage">
               <img class="hero-collage__img hero-collage__img--c" src="./images/hero/hero-3.webp" alt="Cadrage des priorités techniques pour mutuelles de proximité – ADPM" loading="lazy">
               <img class="hero-collage__img hero-collage__img--a" src="./images/hero/hero-2.webp" alt="Accompagnement opérationnel des mutuelles de proximité par l’ADPM" loading="lazy">
-              <img class="hero-collage__img hero-collage__img--b" src="./images/hero/hero-1.webp" alt="Services mutualisés et appui technique pour mutuelles de proximité – ADPM" loading="lazy">
+              <img class="hero-collage__img hero-collage__img--b" src="./images/hero/hero-1.webp" alt="Services mutualisés et appui technique pour mutuelles de proximité – ADPM" fetchpriority="high">
             </div>
           </div>
         </div>
@@ -1045,7 +1047,5 @@
         </div>
       </div>
     </footer>
-
-    <script type="module" src="./js/app.js"></script>
   </body>
 </html>
