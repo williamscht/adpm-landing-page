@@ -2229,8 +2229,8 @@
 
 .contact-submit{
   width: 100%;
-  justify-content: space-between;
-  font-size: 0.875rem;
+  justify-content: space-around;
+  font-size: 1rem;
   margin-top: 16px;
 }
 
