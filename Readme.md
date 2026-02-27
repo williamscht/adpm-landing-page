@@ -1,42 +1,36 @@
 # ADPM — Landing Page (HTML / CSS / JS)
 
-Landing page officielle de l’**ADPM** (Appui et Services Mutualisés), conçue comme une vitrine orientée **services**, à destination des **mutuelles autonomes de proximité**.
+Landing page officielle de l'**ADPM** (Association Diversité et Proximité Mutualiste), conçue comme une vitrine orientée **services**, à destination des **mutuelles de proximité**.
 
-Ce projet est développé **from scratch** en **HTML, CSS et JavaScript vanilla**, avec une approche UI inspirée des standards SaaS.
+Développée **from scratch** en **HTML, CSS et JavaScript vanilla**, avec une approche UI inspirée des standards SaaS.
 
 ---
 
 ## 🎯 Objectif du projet
 
-Créer une landing page moderne permettant de :
-
-- Positionner clairement l’ADPM comme un **appui opérationnel mutualisé**
-- Présenter les services
+- Positionner clairement l'ADPM comme un **appui opérationnel mutualisé**
+- Présenter les services et domaines d'intervention
 - Générer des prises de contact qualifiées
-- Construire un design system évolutif section par section
+- Affirmer l'identité de l'ADPM comme entité distincte de la FDPM
 
 ---
 
+## 🧱 Structure des sections
 
-## 🧱 Méthode de construction
-
-Le site est développé selon une logique **bloc par bloc**, en respectant un découpage MVP :
-
-| Section | Bloc |
-|--------|------|
+| Section | Contenu |
+|--------|---------|
 | A | Header & Navigation |
-| B | Hero full-screen |
-| C | Services Cards |
-| D | Expertise + Partners ticker |
-| E | Timeline / How it works |
-| F | Testimonials |
-| G | Masonry / Bento content |
-| H | FAQ Accordion |
-| I | CTA Contact band |
-| J | Stats / Social proof |
-| K | Footer + Lead form |
-
-Chaque section fait l’objet d’un ticket d’intégration dédié.
+| B | Hero |
+| C | Partenaires — ticker logos |
+| D | À propos / Chiffres clés |
+| E | Nos services |
+| F | Notre expertise — CoTech |
+| G | Notre accompagnement — timeline |
+| H | Comparatif ADPM vs approches classiques |
+| I | Témoignages |
+| J | FAQ |
+| K | Formulaire de contact |
+| L | Footer |
 
 ---
 
@@ -53,21 +47,39 @@ Chaque section fait l’objet d’un ticket d’intégration dédié.
 
 ## 📁 Structure du projet
 
-```txt
-adpm-landing/
+```
+ADPM SITE/
 │
 ├── index.html
 │
 ├── css/
-│   ├── base.css         # Variables globales + layout container
-│   ├── components.css   # Boutons, cards, UI elements
-│   └── sections.css     # Styles section par section (A → K)
+│   ├── base.css          # Variables globales + layout container
+│   ├── components.css    # Boutons, cards, UI elements
+│   └── sections.css      # Styles section par section (A → L)
 │
 ├── js/
-│   └── main.js          # Interactions (theme, scroll effects, forms)
+│   └── main.js           # Interactions (navigation, scroll, formulaire)
 │
 ├── images/
-│   ├── logos/           # Logos partenaires + clients
-│   └── services/        # Visuels sections
+│   ├── about/            # Visuels section À propos
+│   ├── approche/         # Visuels section Accompagnement
+│   ├── contact/          # Visuels section Contact
+│   ├── expertise/        # Visuels section CoTech
+│   ├── favicon/          # Favicon
+│   ├── header/           # Logo header
+│   ├── hero/             # Visuels Hero
+│   ├── logos/            # Logos mutuelles partenaires
+│   ├── og/               # Image Open Graph (og-image.png)
+│   └── services/         # Visuels section Services
 │
 └── README.md
+```
+
+---
+
+## 🔍 SEO
+
+- Données structurées JSON-LD (schema.org) : `NGO`, `WebSite`, `WebPage`, `Service` (×8), `FAQPage`
+- Balises Open Graph et Twitter Card
+- Canonical vers `https://adpm-mutuelles.fr/`
+- `sameAs` : LinkedIn + annuaire-entreprises.data.gouv.fr
