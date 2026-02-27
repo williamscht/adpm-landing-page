@@ -194,7 +194,7 @@ function initContactForm() {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify(payload)
+        body: formData
       });
 
       if (response.status === 429) {
