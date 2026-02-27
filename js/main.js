@@ -84,19 +84,142 @@ function initMobileNav() {
 function initContactForm() {
   const form = document.getElementById('contactForm');
   const hint = document.getElementById('formHint');
-  if (!form || !hint) return;
+  const submitButton = form?.querySelector('button[type="submit"]');
+  const startedAtInput = form?.querySelector('input[name="form_started_at"]');
+  const honeypotInput = form?.querySelector('input[name="website"]');
+  if (!form || !hint || !submitButton) return;
+
+  const RATE_LIMIT_STORAGE_KEY = 'adpm_contact_rate_v1';
+  const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
+  const RATE_LIMIT_MAX_SUBMISSIONS = 3;
+  const RATE_LIMIT_MIN_INTERVAL_MS = 60 * 1000;
+  const MIN_FORM_FILL_MS = 3000;
+
+  const now = () => Date.now();
+
+  const setHint = (html, isError = false) => {
+    hint.classList.toggle('is-error', isError);
+    hint.classList.toggle('is-success', !isError);
+    hint.innerHTML = html;
+  };
+
+  const readRateState = () => {
+    try {
+      const raw = localStorage.getItem(RATE_LIMIT_STORAGE_KEY);
+      if (!raw) return [];
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  };
+
+  const saveRateState = (entries) => {
+    try {
+      localStorage.setItem(RATE_LIMIT_STORAGE_KEY, JSON.stringify(entries));
+    } catch {
+      // Storage may be blocked; keep the form usable.
+    }
+  };
+
+  const pruneRateEntries = (entries) => {
+    const threshold = now() - RATE_LIMIT_WINDOW_MS;
+    return entries.filter((timestamp) => Number.isFinite(timestamp) && timestamp >= threshold);
+  };
+
+  const checkRateLimit = () => {
+    const entries = pruneRateEntries(readRateState());
+    saveRateState(entries);
+    const last = entries[entries.length - 1];
+    if (last && now() - last < RATE_LIMIT_MIN_INTERVAL_MS) {
+      return { allowed: false, reason: 'interval' };
+    }
+    if (entries.length >= RATE_LIMIT_MAX_SUBMISSIONS) {
+      return { allowed: false, reason: 'window' };
+    }
+    return { allowed: true };
+  };
+
+  const recordSubmission = () => {
+    const entries = pruneRateEntries(readRateState());
+    entries.push(now());
+    saveRateState(entries);
+  };
+
+  if (startedAtInput) {
+    startedAtInput.value = String(now());
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    hint.textContent = '';
+
+    if (honeypotInput?.value) {
+      setHint('<span class="form-sent-icon">✓</span> Message envoyé !');
+      form.reset();
+      if (startedAtInput) startedAtInput.value = String(now());
+      return;
+    }
+
+    const startedAt = Number(startedAtInput?.value || 0);
+    if (!startedAt || now() - startedAt < MIN_FORM_FILL_MS) {
+      setHint('Envoi trop rapide. Merci de réessayer.', true);
+      return;
+    }
+
+    const rate = checkRateLimit();
+    if (!rate.allowed) {
+      setHint('Trop de tentatives. Merci de réessayer dans quelques minutes.', true);
+      return;
+    }
+
+    const endpoint = form.dataset.endpoint || form.getAttribute('action');
+    if (!endpoint) {
+      setHint('Formulaire non configuré: ajoute un endpoint d’envoi côté serveur.', true);
+      return;
+    }
+
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
+    const payload = Object.fromEntries(formData.entries());
+    delete payload.website;
+    delete payload.form_started_at;
 
-    hint.textContent = '✓ Message envoyé !';
-    form.reset();
+    submitButton.disabled = true;
+    submitButton.setAttribute('aria-busy', 'true');
 
-    setTimeout(() => {
-      hint.textContent = '';
-    }, 5000);
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.status === 429) {
+        setHint('Trop de demandes. Merci de patienter avant de renvoyer.', true);
+        return;
+      }
+
+      if (!response.ok) {
+        setHint("L'envoi a échoué. Merci de réessayer.", true);
+        return;
+      }
+
+      recordSubmission();
+      setHint('<span class="form-sent-icon">✓</span> Message envoyé !');
+      form.reset();
+      if (startedAtInput) startedAtInput.value = String(now());
+    } catch {
+      setHint("Impossible d'envoyer le message pour le moment.", true);
+    } finally {
+      submitButton.disabled = false;
+      submitButton.removeAttribute('aria-busy');
+      setTimeout(() => {
+        hint.textContent = '';
+      }, 5000);
+    }
   });
 }
 

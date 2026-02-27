@@ -1071,7 +1071,12 @@
           </div>
 
           <div class="contact-right">
-            <form class="form contact-form" id="contactForm">
+            <form class="form contact-form" id="contactForm" method="post" data-endpoint="https://formspree.io/f/xeeldeae">
+              <input type="hidden" name="form_started_at" value="" />
+              <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+              </div>
               <div class="form-grid">
                 <div class="field">
                   <label for="name">Nom</label>
