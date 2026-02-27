@@ -180,9 +180,13 @@ function initContactForm() {
     }
 
     const formData = new FormData(form);
-    const payload = Object.fromEntries(formData.entries());
-    delete payload.website;
-    delete payload.form_started_at;
+    const cleanData = new FormData();
+    cleanData.append('name', formData.get('name') || '');
+    cleanData.append('email', formData.get('email') || '');
+    cleanData.append('company', formData.get('company') || '');
+    cleanData.append('phone', formData.get('phone') || '');
+    cleanData.append('service', formData.get('service') || '');
+    cleanData.append('message', formData.get('message') || '');
 
     submitButton.disabled = true;
     submitButton.setAttribute('aria-busy', 'true');
@@ -190,11 +194,8 @@ function initContactForm() {
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: formData
+        headers: { 'Accept': 'application/json' },
+        body: cleanData
       });
 
       if (response.status === 429) {
