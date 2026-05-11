@@ -2338,7 +2338,7 @@
 
 .services__group-title{
   margin: 0;
-  font-size: 34px;
+  font-size: 24px;
   font-weight: 400;
   color: #0f172a;
   width: min(1040px, 100%);
@@ -2896,4 +2896,210 @@
     font-size: 0.875rem;
   }
   .services__card{ padding: 0; }
+}
+
+/* ===== LEGAL PAGE ===== */
+
+/* Page header */
+.legal-page-header {
+  padding: 64px 0 52px;
+  margin-top: 0;
+}
+
+.legal-page-header .container {
+  max-width: 780px;
+}
+
+.legal-page-header .breadcrumb {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--blue);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.legal-page-header .breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.legal-page-header .breadcrumb a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.legal-page-header .breadcrumb span {
+  margin: 0 0.5rem;
+}
+
+.legal-page-header h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--blue);
+  margin: 0 0 0.75rem;
+}
+
+.legal-page-header .update {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--blue);
+  margin: 0;
+}
+
+/* Main content */
+.legal-main {
+  padding: 64px 0 96px;
+}
+
+.legal-content {
+  padding-top: 64px;
+  padding-bottom: 96px;
+  max-width: 780px;
+}
+
+/* Sections */
+.legal-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp 0.4s ease both;
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.legal-section:nth-child(1) { animation-delay: 0.05s; }
+.legal-section:nth-child(2) { animation-delay: 0.10s; }
+.legal-section:nth-child(3) { animation-delay: 0.15s; }
+.legal-section:nth-child(4) { animation-delay: 0.20s; }
+.legal-section:nth-child(5) { animation-delay: 0.25s; }
+.legal-section:nth-child(6) { animation-delay: 0.30s; }
+.legal-section:nth-child(7) { animation-delay: 0.35s; }
+.legal-section:nth-child(8) { animation-delay: 0.40s; }
+.legal-section:nth-child(9) { animation-delay: 0.45s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.legal-section .section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 0.45rem;
+  display: block;
+}
+
+.legal-section h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  margin: 0 0 1.2rem;
+}
+
+/* Info card */
+.info-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+}
+
+.info-card address {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--fg);
+  line-height: 1.9;
+  font-family: "Montserrat", system-ui, sans-serif;
+}
+
+.info-card address strong {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.info-card address a {
+  color: var(--orange);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.info-card address a:hover {
+  text-decoration: underline;
+}
+
+/* Body text */
+.legal-section p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section p strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.legal-section p a {
+  color: var(--orange);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.legal-section p a:hover {
+  text-decoration: underline;
+}
+
+/* Plausible badge */
+.tool-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--card);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem 0.35rem 0.5rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 1rem;
+}
+
+.tool-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1dd685;
+  flex-shrink: 0;
+}
+
+/* Fixed header offset */
+main.legal-main {
+  padding-top: calc(120px + 64px);
+}
+
+@media (max-width: 900px) {
+  main.legal-main {
+    padding-top: calc(88px + 48px);
+  }
+
+  .legal-page-header {
+    padding: 48px 0 40px;
+  }
 }

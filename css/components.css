@@ -5,13 +5,26 @@
   top: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: #ffffff;
   z-index: 100;
   padding: 24px 0;
+  isolation: isolate;
   transition: padding 0.3s ease;
 }
 
+.site-header::before{
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 132px;
+  pointer-events: none;
+  z-index: 0;
+  background: #ffffff;
+}
+
 .header-shell{
+  position: relative;
+  z-index: 1;
   width: min(var(--container), calc(100% - (var(--gutter) * 2)));
   margin: 0 auto;
   background: rgba(236, 236, 236, 0.68);
@@ -251,6 +264,7 @@
 
 .header-cta:hover{
   background: color-mix(in srgb, var(--fg) 85%, black);
+  text-decoration: none;
   transform: translateY(-2px);
 }
 
@@ -375,6 +389,10 @@
 @media (max-width: 900px){
   .site-header{
     background: transparent;
+  }
+
+  .site-header::before{
+    height: 104px;
   }
 
   .nav-desktop{
@@ -716,4 +734,5 @@ input:focus, textarea:focus, select:focus{
 .btn-nous-ecrire:hover {
   background: var(--fg);
   color: var(--bg);
+  text-decoration: none;
 }
